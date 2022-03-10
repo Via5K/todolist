@@ -23,7 +23,7 @@ app.get("/", function(req, res) {
 
 app.post("/", function(req, res) {
     let item = req.body.newTask;
-    if (req.bosy.list === 'work') {
+    if (req.body.addButton === "Work") {
         workTask.push(item);
         res.redirect("/work");
     } else {
