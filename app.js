@@ -23,7 +23,7 @@ app.get("/", function(req, res) {
 
 app.post("/", function(req, res) {
     let item = req.body.newTask;
-    if (req.bosy.list === 'work') {
+    if (req.body.addButton === "Work") {
         workTask.push(item);
         res.redirect("/work");
     } else {
@@ -42,6 +42,6 @@ app.post("/work", function(req, res) {
     res.redirect("/work");
 });
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
     console.log('Server started....');
 });
