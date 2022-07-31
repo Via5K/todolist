@@ -5,7 +5,7 @@ A web application that helps you to keep track of your tasks.
 * Multiple different todo List maintained seperately.
 * Work and Personal list can be created via Website.
 * In order to add new custom list, add yourUniqueName at the last of the URL.
-* Example: ".../heroku.app/yourUniqueName"
+* Example: ".../herokuapp.com/yourUniqueName"
 
 
 ## Snapshots
