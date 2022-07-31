@@ -12,7 +12,7 @@ app.use(parser.urlencoded({
 }));
 
 app.use(express.static("public"));
-const url = "mongodb+srv://admin-todolist-neeraj:" + process.env.PASSWORD + "@cluster0.etxoobi.mongodb.net/toDoListDB";
+const url = process.env.ADMIN + process.env.PASSWORD + process.env.DB;
 mongoose.connect(url, {
     useNewUrlParser: true
 });
