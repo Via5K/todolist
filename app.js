@@ -3,7 +3,7 @@ const parser = require('body-parser');
 const mongoose = require('mongoose');
 const ejs = require('ejs');
 const _ = require('lodash');
-
+const dotenv = require('dotenv').config();
 
 const app = express();
 app.set('view engine', 'ejs');
@@ -12,8 +12,8 @@ app.use(parser.urlencoded({
 }));
 
 app.use(express.static("public"));
-
-mongoose.connect("mongodb+srv://admin-todolist-neeraj:Test-123$@cluster0.etxoobi.mongodb.net/toDoListDB", {
+const url = "mongodb+srv://admin-todolist-neeraj:" + process.env.PASSWORD + "@cluster0.etxoobi.mongodb.net/toDoListDB";
+mongoose.connect(url, {
     useNewUrlParser: true
 });
 const itemsSchema = {
